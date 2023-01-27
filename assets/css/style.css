@@ -1,0 +1,293 @@
+/* Import Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* ROOT STYLES */
+
+:root {
+
+    /* colors */
+    --pure-blue: #E0EBED;
+    --red-google: #CE3100;
+    --blue-facebook: #395185;
+    --pure-white: #FFFFFF;
+    --pure-black: #000000;
+    --pure-gray: #78788C;
+    --blue-title:#29293E;
+
+    /* font size */
+    --fs-40: 40px;
+    --fs-20: 20px;
+
+    /* font weight */
+    --fw-800: 800;
+    --fw-600: 600;
+    --fw-400: 400;
+
+}
+
+/* RESET STYLES */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+select,
+button,
+textarea {
+    background: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* REUSED STYLES */
+
+.section {
+    padding-block: 50px;
+}
+
+.container {
+    padding-inline: 100px;
+}
+
+.icon {
+    color: #78788C;
+}
+
+.gray {
+    color: var(--pure-gray);
+}
+
+.semibold {
+    font-weight: var(--fw-400);
+}
+
+/* INPUT */
+
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 29px;
+    height: 60px;
+    line-height: 50px;
+    border-radius: 10px;
+    background: #F9F9F9;
+    border: 0.3px solid #798291;
+    border-radius: 10px;
+    width: 450px;
+    font-size: var(--fs-20);
+}
+
+.input-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.input-text>input {
+    font-size: var(--fs-20);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    padding: 20px 50px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn-block {
+    display: block;
+    padding-block: 20px;
+    text-align: center;
+    color: white;
+    width:450px;
+    border-radius: 10px;
+    font-size: var(--fs-20);
+}
+
+.btn-black {
+    background-color: var(--pure-black);
+}
+
+.btn-google {
+    background-color: var(--red-google);
+}
+
+.btn-facebook {
+    background-color: var(--blue-facebook);
+}
+
+.img-cover {
+    width: 480px;
+    height: 500px;
+    left: 100px;
+    top: 228px;
+
+    /* object-fit: cover; */
+}
+
+/* Login Page */
+
+/* NAVBAR */
+
+.navbar {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar a.logo {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.navbar .logo span {
+    font-size: var(--fs-20);
+    font-weight: 800;
+    color: var(--pure-black);
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.left-side {
+    background-color: var(--pure-blue);
+    height: 945px;
+    width: 670px;
+    padding-top: 156px;
+    padding-bottom: 170px;
+    padding-inline: 100px;
+}
+
+.left-side .title{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800px;
+    font-size: 40px;
+    line-height: 54px;
+    font-size: clamp(32px, 4vw, 40px);
+}
+
+.left-side>img {
+    width: 493px;
+    height: 547px;
+    left: 100px;
+    top: 228px;
+    padding-top: 50px;
+}
+
+.right-side {
+    background-color: var(--pure-white);
+    height: 956px;
+    width: 770px;
+    padding-top: 163px;
+    padding-bottom: 170px;
+    padding-inline: 100px;
+}
+
+.right-side .title{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800px;
+    font-size: 40px;
+    line-height: 54px;
+    font-size: clamp(32px, 4vw, 40px);
+    color: var(--blue-title);
+}
+
+
+/* FORM */
+
+.form-wrapper {
+    margin-top: 50px;
+}
+
+.form-wrapper .input-wrapper {
+    margin-bottom: 15px;
+}
+
+.form-wrapper .input-wrapper .icon {
+    cursor: pointer;
+}
+
+.form-wrapper .input-wrapper .icon{
+    margin-top: 12px;
+    transition: .2s ease-in-out;
+}
+
+.form-wrapper .input-wrapper .icon:is(:hover, :focus-visible) ion-icon {
+    color: #000000;
+}
+
+.form-wrapper .input-text input {
+    width: 85%;
+}
+
+.form-wrapper .btn-block {
+    margin-top: 30px;
+}
+
+.form-wrapper .form-text {
+    margin-block: 15px 45px;
+}
+
+.form-wrapper .form-text .reg{
+    color: #000000;
+}
+
+.form-wrapper .form-text .log{
+    color: #000000;
+}
+
+.form-wrapper .form-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-size-adjust:80px, 40px;
+}
+
+.form-buttons .btn {
+    width: 217px;
+    
+    
+}
